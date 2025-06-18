@@ -5,13 +5,16 @@ import { scale } from 'framer-motion';
 
 const ProductCard = ({product, loading}) => {
     return <Skeleton isLoaded={!loading} _hover={{size: 1.5}}>
+    {/* PARA PROBAR FUNCION SKELETON, APAGAR COMENTARIO ABAJO */}
+    {/* return <Skeleton isLoaded={false} _hover={{size: 1.5}}> */}
         <Box
         _hover={{transform: 'scale(1.1)', transitionDuration: '0.5s'}}
         borderWidth={'1px'}
         overflow={'hidden'}
         p='4'
         shadow={'md'}>
-            <Image />
+            {/* FALLBACK SOURCE LINK, ACORDE DOCUMENTACIÓN CHAKRA */}
+            <Image  src={product.images[0]} fallbackSrc='https://via.placeholder.com/150' alt={product.name} height='200px'/>
             {product.stock < 5 ? (
                 <Badge colorScheme='yellow'> Apenas {product.stock} itens disponibles</Badge>
             ) : product.stock < 1 ? (
