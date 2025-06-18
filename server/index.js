@@ -1,8 +1,8 @@
-import dotenv from 'dotenv'
-dotenv.config()
+import dotenv from 'dotenv';
+dotenv.config();
 import connectToDatabase from './db.js';
 import express from 'express';
-import cors from 'cors'
+import cors from 'cors';
 
 // Rutas
 import productRoutes from './routes/productRoutes.js';
@@ -23,4 +23,4 @@ app.get('/', (req,res) => {
 
 app.listen(port, () => {
     console.log(`Server runs on port ${port}`);
-    });
+});

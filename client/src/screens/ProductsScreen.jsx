@@ -1,0 +1,29 @@
+import { Box, /* Center, Wrap, WrapItem */ } from '@chakra-ui/react';
+import ProductCard from '../components/ProductCard';
+import axios from 'axios';
+import { useState, useEffect } from 'react'
+
+
+const ProductsScreen = () => {
+    const [data, setData] = useState([])
+
+    useEffect(() => {
+        axios.get('/api/products').then(response => {
+            setData(response.data.products);
+        }).catch(error => {
+            console.error('Error fetching data:', error);
+        });
+    }, []);
+
+    return (
+        <> 
+            {data.length > 1 && (
+                <Box>
+                    <ProductCard product={data[0]} loading= {false}/>
+                </Box>
+            )}
+        </>
+    );
+};
+
+export default ProductsScreen;

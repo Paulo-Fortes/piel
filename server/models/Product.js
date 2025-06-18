@@ -46,12 +46,10 @@ const productSchema = new mongoose.Schema(
             required: true,
         },
         stripeId: {
-            type: String,        
+            type: String,      
         },
-
     },
     {timestamps: true}
-
 );
 
 const Product = mongoose.model('Product', productSchema);

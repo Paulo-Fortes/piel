@@ -4,14 +4,14 @@
 /node_modules
 /.pnp
 .pnp.js
+node_modules/
 
 # testing
 /coverage
 
 # production
 /build
-
-//contiene información sensible: link de conexion de la BD
+//contiene información sensible: link de conexion de la BD (.env)
 .env
 
 # misc
