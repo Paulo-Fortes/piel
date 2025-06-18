@@ -13,17 +13,30 @@ const ProductCard = ({product, loading}) => {
         shadow={'md'}>
             <Image />
             {product.stock < 5 ? (
-                <Badge colorScheme='yellow'>only {product.stock} left</Badge>
+                <Badge colorScheme='yellow'> Apenas {product.stock} itens disponibles</Badge>
             ) : product.stock < 1 ? (
-                <Badge colorScheme='red'>Sold out</Badge>
+                <Badge colorScheme='red'>Agotado</Badge>
             ) : (
-                <Badge colorScheme='green'>In stock</Badge>
+                <Badge colorScheme='green'>Hay stock</Badge>
                 )}
                 {product.productIsNew && (
                     <Badge ml='2' colorScheme='purple'>
-                        new
+                        Nuevo
                     </Badge>
                 )}
+                <Text noOfLines={1} fontSize='xl' fontWeight='semibold' mt='2'>
+                    {product.brand} {` `} {product.name}
+                </Text>
+                <Text noOfLines={1} fontSize='md' color='gray.500'>
+                    {product.subtitle}
+                </Text>
+                <Flex justify='space-between' alignItems='center' mt='2'>
+                    <Badge colorScheme='cyan'>{product.category}</Badge>
+                    <Text fontSize='xl' fontWeight='semibold' color='cyan.500'>
+                        AR${' '}{product.price}
+                    </Text>
+                </Flex>
+                <IconButton icon={<BiExpand size='20'/>} colorScheme='cyan' size='sm' />
         </Box>
     </Skeleton>    
 };

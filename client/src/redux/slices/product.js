@@ -35,4 +35,4 @@ export const productsSlice = createSlice({
 
 export const {setLoading, setError, setProducts, setPagination} = productsSlice.actions;
 export default productsSlice.reducer;
-export const productSelector =  (state) => state.products;
+export const productSelector = (state) => state.products;

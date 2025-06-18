@@ -15,7 +15,8 @@ export const getProducts = (page, favouriteToggle) => async (dispatch) => {
             ? error.response.data.message
             :error.message 
             ? error.message
-            : 'Ha pasado un error inesperado. Por favor, intente luego'
-        ))
+            : 'Ha pasado un error inesperado. Por favor, intente luego (PRODUCT ACTIONS.JS)'
+            )
+        );
     }
 };

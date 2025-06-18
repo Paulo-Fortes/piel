@@ -8,4 +8,5 @@ const reducer = combineReducers({
 
 export default configureStore({ reducer});
 
-/* REDUX MEJORA LA COMUNICACIÓN ENTRE FRONT Y EL BACKEND */
+/* REDUX MEJORA LA COMUNICACIÓN ENTRE FRONT-client- Y EL BACKEND -server- */
+/* SE DIVIDE EN: STORE, SLICE (UPDATES) Y ACTIONS */
