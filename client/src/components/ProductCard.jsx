@@ -14,6 +14,7 @@ const ProductCard = ({product, loading}) => {
         p='4'
         shadow={'md'}>
             {/* FALLBACK SOURCE LINK, ACORDE DOCUMENTACIÓN CHAKRA */}
+            {/* https://v2.chakra-ui.com/docs/components/image/usage#fallback-support */}
             <Image  src={product.images[0]} fallbackSrc='https://via.placeholder.com/150' alt={product.name} height='200px'/>
             {product.stock < 5 ? (
                 <Badge colorScheme='yellow'> Apenas {product.stock} itens disponibles</Badge>
@@ -28,7 +29,7 @@ const ProductCard = ({product, loading}) => {
                     </Badge>
                 )}
                 <Text noOfLines={1} fontSize='xl' fontWeight='semibold' mt='2'>
-                    {product.brand} {` `} {product.name}
+                    {product.name}
                 </Text>
                 <Text noOfLines={1} fontSize='md' color='gray.500'>
                     {product.subtitle}
