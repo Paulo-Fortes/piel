@@ -6,5 +6,4 @@ function App() {
     <ProductsScreen/>
   </ChakraProvider>;
 }
-
 export default App;
